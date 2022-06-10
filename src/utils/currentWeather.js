@@ -12,7 +12,7 @@ const currentWeather = (lat, lon, callback) => {
             callback("Invalid Query. Please provide proper coordinates", undefined)
         }
         else {
-            callback(undefined, body.current.weather_descriptions[0] + ". It is " + body.current.temperature +"°F out, and feels like " + body.current.feelslike + "°F.")
+            callback(undefined, body.current.weather_descriptions[0] + ". It is " + body.current.temperature +"°F out, and feels like " + body.current.feelslike + "°F. Humidity is " + body.current.humidity + " and chance of precipitation is " + body.current.precip)
         }
         
     })
